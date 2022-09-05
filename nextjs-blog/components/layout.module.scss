@@ -1,0 +1,14 @@
+.container {
+  inline-size: min(1000px, 100vw - 30px);
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
