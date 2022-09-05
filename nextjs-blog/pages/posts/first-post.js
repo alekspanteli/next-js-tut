@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import Layout from '../../components/layout';
+import styles from '../../styles/alert.module.css';
+import cn from 'classnames';
 
 const ShowProfileImage = () => (
   <Image
@@ -12,6 +14,19 @@ const ShowProfileImage = () => (
   />
 );
 
+const Alert = ({ children, type }) => {
+  return (
+    <div
+      className={cn({
+        [styles.success]: type === 'success',
+        [styles.error]: type === 'error',
+      })}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function FirstPost() {
   return (
     <Layout>
@@ -20,6 +35,7 @@ export default function FirstPost() {
       </Head>
       <h1>First Post</h1>
       <ShowProfileImage />
+      <Alert type="success">test</Alert>
     </Layout>
   );
 }
