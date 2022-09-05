@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import Layout from '../../components/layout';
-import styles from '../../styles/alert.module.css';
+import styles from '../../styles/alert.module.scss';
 import cn from 'classnames';
 
 const ShowProfileImage = () => (
